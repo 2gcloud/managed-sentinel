@@ -394,6 +394,24 @@
                       "visible": "[if(contains(steps('dataConnectors').enableDataConnectors,'AzureActiveDirectory'),true,false)]"
                   }
               ]
+          },
+          {
+            "name": "azureLighthouse",
+              "label": "Azure Lighthouse delegation",
+              "elements": [
+                {
+                    "name": "Important information",
+                    "type": "Microsoft.Common.TextBlock",
+                    "visible": true,
+                    "options": {
+                      "text": "This deployment gives 2G Cloud access to the resource group specified. 2G Cloud will be given the Azure RBAC roles: Sentinel Contributor and Sentinel Responder to the resource group. This gives 2G Cloud access to deploy and manage the Microsoft Sentinel resource in your subscription. A full audit trail of 2G Cloud's actions in your subscription is still provided by the activity log, and the access can be managed in Azure Lighthouse.",
+                      "link": {
+                        "label": "Learn more about Azure Lighthouse delegations",
+                        "uri": "https://learn.microsoft.com/en-us/azure/lighthouse/overview"
+                      }
+                    }
+                  }
+              ]
           }
         ],
         "outputs": {
