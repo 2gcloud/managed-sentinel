@@ -5,79 +5,22 @@
         "rgName": {
             "type": "string"
         },
-        "mspOfferName": {
-            "type": "string",
-            "metadata": {
-                "description": "Specify a unique name for your offer"
-            },
-            "defaultValue": "2G Cloud Managed Sentinel"
+        "mspRegistrationName": {
+            "type": "string"
         },
-        "mspOfferDescription": {
-            "type": "string",
-            "metadata": {
-                "description": "Description of the Managed Service Provider offering"
-            },
-            "defaultValue": "2G Cloud's Managed Sentinel solution. 2G Cloud is given access to log data stored in your own tenant. The data is processed by 2G Cloud analytics rules but is not exported from the tenant."
-        },
-        "managedByTenantId": {
-            "type": "string",
-            "metadata": {
-                "description": "Specify the tenant id of the Managed Service Provider"
-            },
-            "defaultValue": "4843dccc-9d7b-403f-b1c5-5592fdb9bda1"
-        },
-        "authorizations": {
-            "type": "array",
-            "metadata": {
-                "description": "Specify an array of objects, containing tuples of Azure Active Directory principalId, a Azure roleDefinitionId, and an optional principalIdDisplayName. The roleDefinition specified is granted to the principalId in the provider's Active Directory and the principalIdDisplayName is visible to customers."
-            },
-            "defaultValue": [
-                { 
-                    "principalId": "fcd96a3b-ffb2-4c6f-9f6e-204eaf6e733e", 
-                    "roleDefinitionId": "ab8e14d6-4a74-4a29-9ba8-549422addade",
-                    "principalIdDisplayName": "Managed Sentinel Security Engineer" 
-                }, 
-                { 
-                    "principalId": "fcd96a3b-ffb2-4c6f-9f6e-204eaf6e733e", 
-                    "roleDefinitionId": "87a39d53-fc1b-424a-814c-f7e04687dc9e",
-                    "principalIdDisplayName": "Managed Sentinel Security Engineer" 
-                }, 
-                { 
-                    "principalId": "fcd96a3b-ffb2-4c6f-9f6e-204eaf6e733e", 
-                    "roleDefinitionId": "91c1777a-f3dc-4fae-b103-61d183457e46",
-                    "principalIdDisplayName": "Managed Sentinel Security Engineer" 
-                }, 
-                { 
-                    "principalId": "fcd96a3b-ffb2-4c6f-9f6e-204eaf6e733e", 
-                    "roleDefinitionId": "3e150937-b8fe-4cfb-8069-0eaf05ecd056",
-                    "principalIdDisplayName": "Managed Sentinel Security Responders" 
-                }
-            ]
-        }             
+        "mspAssignmentName": {
+            "type": "string"
+        }
     },
     "variables": {
-        "mspRegistrationName": "[guid(parameters('mspOfferName'))]",
-        "mspAssignmentName": "[guid(parameters('mspOfferName'))]"
     },
     "resources": [
-        {
-            "type": "Microsoft.ManagedServices/registrationDefinitions",
-            "apiVersion": "2019-06-01",
-            "name": "[variables('mspRegistrationName')]",
-            "properties": {
-                "registrationDefinitionName": "[parameters('mspOfferName')]",
-                "description": "[parameters('mspOfferDescription')]",
-                "managedByTenantId": "[parameters('managedByTenantId')]",
-                "authorizations": "[parameters('authorizations')]"
-            }
-        },
         {
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2018-05-01",
             "name": "rgAssignment",
             "resourceGroup": "[parameters('rgName')]",
             "dependsOn": [
-                "[resourceId('Microsoft.ManagedServices/registrationDefinitions/', variables('mspRegistrationName'))]"
             ],
             "properties":{
                 "mode":"Incremental",
@@ -89,9 +32,9 @@
                         {
                             "type": "Microsoft.ManagedServices/registrationAssignments",
                             "apiVersion": "2019-06-01",
-                            "name": "[variables('mspAssignmentName')]",
+                            "name": "[parameters('mspAssignmentName')]",
                             "properties": {
-                                "registrationDefinitionId": "[resourceId('Microsoft.ManagedServices/registrationDefinitions/', variables('mspRegistrationName'))]"
+                                "registrationDefinitionId": "[resourceId('Microsoft.ManagedServices/registrationDefinitions/', parameters('mspRegistrationName'))]"
                             }
                         }
                     ]
