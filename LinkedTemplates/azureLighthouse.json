@@ -6,8 +6,7 @@
             "type": "string",
             "metadata": {
                 "description": "Specify the subscription on which Azure Lighthouse should be enabled"
-            },
-            "defaultValue": "[subscription().id]"
+            }
         },
         "mspOfferName": {
             "type": "string",
