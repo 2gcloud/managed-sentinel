@@ -3,7 +3,8 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "rgName": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "rg-managed-sentinel-2gcloudholding"
         },
         "location": {
             "type": "string"
@@ -12,7 +13,8 @@
             "type": "string",
             "metadata": {
                 "description": "Name for the Log Analytics workspace"
-            }
+            },
+            "defaultValue": "rg-managed-sentinel-2gcloudholding-law"
         },
         "pricingTierLA": {
             "type": "string",
