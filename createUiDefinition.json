@@ -326,7 +326,6 @@
                                 "value": "Office365"
                             }
                           ],
-                          "defaultValue": ["AzureActivity"],
                           "required": true
                       },
                       "visible": true
