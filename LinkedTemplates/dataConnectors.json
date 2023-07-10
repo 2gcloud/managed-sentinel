@@ -4,7 +4,7 @@
     "parameters": {
         "dataConnectorsKind": {
             "type": "array",
-            "defaultValue": [],
+            "defaultValue": ["AzureActivity"],
             "metadata": {
                 "description": "The kind of data connectors to enable"
             }
