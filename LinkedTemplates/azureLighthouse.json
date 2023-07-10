@@ -67,7 +67,6 @@
             "type": "Microsoft.ManagedServices/registrationDefinitions",
             "apiVersion": "2019-06-01",
             "name": "[variables('mspRegistrationName')]",
-            "scope": "[parameters('registrationScope')]",
             "properties": {
                 "registrationDefinitionName": "[parameters('mspOfferName')]",
                 "description": "[parameters('mspOfferDescription')]",

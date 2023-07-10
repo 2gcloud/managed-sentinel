@@ -153,6 +153,7 @@
             "name": "lighthouseDelegation",
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2020-06-01",
+            "scope": "[subscription().id]",
             "dependsOn": [
                 "[resourceId('Microsoft.Resources/resourceGroups',parameters('rgName'))]"
             ],
