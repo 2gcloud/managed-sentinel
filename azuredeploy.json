@@ -227,8 +227,12 @@
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
-                    "mspRegistrationName": "[variables('mspRegistrationName')]",
-                    "mspAssignmentName": "[variables('mspAssignmentName')]"
+                    "mspRegistrationName": {
+                        "value": "[variables('mspRegistrationName')]"
+                    },
+                    "mspAssignmentName": {
+                        "value": "[variables('mspAssignmentName')]"
+                    } 
                 }
             }
         },
