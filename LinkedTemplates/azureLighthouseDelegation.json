@@ -2,6 +2,9 @@
     "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
+        "rgName": {
+            "type": "string"
+        },
         "mspOfferName": {
             "type": "string",
             "metadata": {
@@ -56,10 +59,10 @@
         "mspRegistrationName": "[guid(parameters('mspOfferName'))]",
         "mspAssignmentName": "[guid(parameters('mspOfferName'))]"
     },
-    "resources": [
+"resources": [
         {
             "type": "Microsoft.ManagedServices/registrationDefinitions",
-            "apiVersion": "2019-06-01",            
+            "apiVersion": "2019-06-01",
             "name": "[variables('mspRegistrationName')]",
             "properties": {
                 "registrationDefinitionName": "[parameters('mspOfferName')]",
@@ -72,6 +75,7 @@
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2018-05-01",
             "name": "rgAssignment",
+            "resourceGroup": "[parameters('rgName')]",
             "dependsOn": [
                 "[resourceId('Microsoft.ManagedServices/registrationDefinitions/', variables('mspRegistrationName'))]"
             ],
@@ -86,7 +90,6 @@
                             "type": "Microsoft.ManagedServices/registrationAssignments",
                             "apiVersion": "2019-06-01",
                             "name": "[variables('mspAssignmentName')]",
-                            "location": "[resourceGroup().location]",
                             "properties": {
                                 "registrationDefinitionId": "[resourceId('Microsoft.ManagedServices/registrationDefinitions/', variables('mspRegistrationName'))]"
                             }
@@ -95,5 +98,15 @@
                 }
             }
         }
-    ]
+    ],
+    "outputs": {
+        "mspOfferName": {
+            "type": "string",
+            "value": "[concat('Managed by', ' ', parameters('mspOfferName'))]"
+        },
+        "authorizations": {
+            "type": "array",
+            "value": "[parameters('authorizations')]"
+        }
+    }
 }
