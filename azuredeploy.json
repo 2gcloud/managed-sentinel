@@ -138,43 +138,6 @@
         }
     },
     "variables": {
-        "mspOfferName": {
-            "type": "string",
-            "value": "2G Cloud Managed Sentinel"
-        },
-        "mspOfferDescription": {
-            "type": "string",
-            "value": "Managed Sentinel by 2G Cloud. This is a full 24/7 SOC solution with Managed Detection and Response (MDR). 2G Cloud Managed Sentinel is powered by Microsoft Defender and Microsoft Sentinel UEBA (User Entity Behaviour Analytics) machine learning engine. The service furthermore uses more than 50 custom signature based analytics rules to detect suspicious activity."
-        },
-        "managedByTenantId": {
-            "type": "string",
-            "value": "4843dccc-9d7b-403f-b1c5-5592fdb9bda1"
-        },
-        "authorizations": {
-            "type": "array",
-            "value": [
-                { 
-                    "principalId": "fcd96a3b-ffb2-4c6f-9f6e-204eaf6e733e", 
-                    "roleDefinitionId": "ab8e14d6-4a74-4a29-9ba8-549422addade",
-                    "principalIdDisplayName": "Managed Sentinel Security Engineer" 
-                }, 
-                { 
-                    "principalId": "fcd96a3b-ffb2-4c6f-9f6e-204eaf6e733e", 
-                    "roleDefinitionId": "87a39d53-fc1b-424a-814c-f7e04687dc9e",
-                    "principalIdDisplayName": "Managed Sentinel Security Engineer" 
-                }, 
-                { 
-                    "principalId": "fcd96a3b-ffb2-4c6f-9f6e-204eaf6e733e", 
-                    "roleDefinitionId": "91c1777a-f3dc-4fae-b103-61d183457e46",
-                    "principalIdDisplayName": "Managed Sentinel Security Engineer" 
-                }, 
-                { 
-                    "principalId": "fcd96a3b-ffb2-4c6f-9f6e-204eaf6e733e", 
-                    "roleDefinitionId": "3e150937-b8fe-4cfb-8069-0eaf05ecd056",
-                    "principalIdDisplayName": "Managed Sentinel Security Responders" 
-                }
-            ]
-        }
     },
     "resources": [
         {
@@ -199,18 +162,6 @@
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
-                    "mspOfferName": {
-                        "value": "[variables('mspOfferName')]"
-                    },
-                    "mspOfferDescription": {
-                        "value": "[variables('mspOfferDescription')]"
-                    },
-                    "managedByTenantId": {
-                        "value": "[variables('managedByTenantId')]"
-                    },
-                    "authorizations": {
-                        "value": "[variables('authorizations')]"
-                    }
                 }
             }
         },
