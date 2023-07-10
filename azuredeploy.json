@@ -220,7 +220,6 @@
                 "[resourceId('Microsoft.Resources/resourceGroups',parameters('rgName'))]",
                 "[resourceId('Microsoft.ManagedServices/registrationDefinitions/', variables('mspRegistrationName'))]"
             ],
-            "resourceGroup": "[parameters('rgName')]",
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
