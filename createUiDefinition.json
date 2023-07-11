@@ -21,8 +21,8 @@
                 "name": "rgName",
                 "type": "Microsoft.Common.TextBox",
                 "label": "Resource Group name",
-                "placeholder": "Please include your company name",
-                "defaultValue": "rg-managed-sentinel-companyname",
+                "placeholder": "Fx. rg-managed-sentinel-companyname",
+                "defaultValue": "",
                 "toolTip": "Enter a resource group name that includes your company name.",
                 "constraints": {
                     "required": true,
@@ -35,8 +35,8 @@
                 "name": "workspaceName",
                 "type": "Microsoft.Common.TextBox",
                 "label": "Workspace Name",
-                "placeholder": "Please include your company name",
-                "defaultValue": "rg-managed-sentinel-companyname-law",
+                "placeholder": "Fx. rg-managed-sentinel-companyname-law",
+                "defaultValue": "",
                 "toolTip": "The Workspace name should include 4-63 letters, digits or '-'. The '-' shouldn't be the first or the last symbol. Please include your company name in the Workspace name.",
                 "constraints": {
                     "required": true,
