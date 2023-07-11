@@ -293,7 +293,7 @@
                   {
                       "name": "enableSolutions1P",
                       "type": "Microsoft.Common.DropDown",
-                      "label": "Select Microsoft Content Hub solutions to install",
+                      "label": "Select Microsoft Content Hub data connection solutions to install",
                       "placeholder": "",
                       "multiselect": true,
                       "filter": true,
@@ -366,7 +366,21 @@
                           ],
                           "required": false
                       },
-                      "visible": true
+                      "visible": true,
+                      "defaultValue": [
+                        {"value": "Azure Active Directory solution for Sentinel"}, 
+                        {"value": "Azure Activity solution for Sentinel"}, 
+                        {"value": "Microsoft Sentinel Solution for Dynamics 365 CE Apps (Preview)"}, 
+                        {"value": "Microsoft 365 solution for Sentinel"}, 
+                        {"value": "Microsoft Defender for Cloud solution for Sentinel"}, 
+                        {"value": "Microsoft Defender for Endpoint"}, 
+                        {"value": "Microsoft Defender for IoT solution for Microsoft Sentinel"}, 
+                        {"value": "Microsoft Purview Insider Risk Management"}, 
+                        {"value": "Microsoft PowerBI solution for Sentinel"}, 
+                        {"value": "Microsoft Project solution for Sentinel"}, 
+                        {"value": "Microsoft Sentinel for Teams (Preview)"}, 
+                        {"value": "Threat Intelligence (Preview)"}
+                    ]
                   },
                   {
                     "name": "enableSolutionsEssentials",
