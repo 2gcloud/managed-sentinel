@@ -4,7 +4,7 @@
     "parameters": {
         "rgName": {
             "type": "string",
-            "defaultValue": "rg-managed-sentinel-2gcloudholding"
+            "defaultValue": "rg-managed-sentinel-companyname"
         },
         "location": {
             "type": "string"
@@ -14,7 +14,7 @@
             "metadata": {
                 "description": "Name for the Log Analytics workspace"
             },
-            "defaultValue": "rg-managed-sentinel-2gcloudholding-law"
+            "defaultValue": "rg-managed-sentinel-companyname-law"
         },
         "pricingTierLA": {
             "type": "string",
