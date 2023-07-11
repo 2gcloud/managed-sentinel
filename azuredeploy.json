@@ -189,8 +189,14 @@
         }        
     },
     "variables": {
-        "mspRegistrationName": "[guid(parameters('mspOfferName'))]",
-        "mspAssignmentName": "[guid(parameters('mspOfferName'))]"
+        "mspRegistrationName": {
+            "type": "string",
+            "value": "[guid(parameters('mspOfferName'))]"
+        },
+        "mspAssignmentName": {
+            "type": "string",
+            "value": "[guid(parameters('mspOfferName'))]"
+        }
     },
     "resources": [
         {
