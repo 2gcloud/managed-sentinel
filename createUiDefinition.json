@@ -570,7 +570,14 @@
                           ],
                           "required": true
                       },
-                      "visible": true
+                      "visible": true,
+                      "defaultValue": [
+                        {"value": "AzureActiveDirectory"}, 
+                        {"value": "AzureActivity"}, 
+                        {"value": "Microsoft365Defender"}, 
+                        {"value": "MicrosoftDefenderForCloud"}, 
+                        {"value": "Office365"}
+                    ]
                   },
                   {
                     "name": "aadStreams",
@@ -631,7 +638,13 @@
                                   "value": "ServicePrincipalRiskEvents"
                               }
                           ],
-                          "required": false
+                          "required": false,
+                          "defaultValue": [
+                            {"value": "SignInLogs"}, 
+                            {"value": "AuditLogs"}, 
+                            {"value": "RiskyUsers"}, 
+                            {"value": "RiskyServicePrincipals"}
+                        ]
                       },
                       "visible": "[if(contains(steps('dataConnectors').enableDataConnectors,'AzureActiveDirectory'),true,false)]"
                   }
