@@ -259,7 +259,8 @@
                           ],
                           "required": false
                       },
-                      "visible": "[if(steps('settings').enableUeba, true, false)]"
+                      "visible": "[if(steps('settings').enableUeba, true, false)]",
+                      "defaultValue": ["AzureActiveDirectory"]
                   },
                   {
                       "name": "enableDiagnostics",
@@ -270,7 +271,8 @@
                           "required": false,
                           "validationMessage": "Please select"
                       },
-                      "visible": true
+                      "visible": true,
+                      "defaultValue": true
                   }
               ]
           },
