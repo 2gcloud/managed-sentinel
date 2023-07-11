@@ -698,9 +698,9 @@
                     "type": "Microsoft.Common.TextBlock",
                     "visible": true,
                     "options": {
-                      "text": "This deployment gives 2G Cloud access to the resource group deployed or specified. 2G Cloud will be given the Azure RBAC roles: 'Microsoft Sentinel Contributor', 'Microsoft Sentinel Responder' and 'Logic App Contributor' to the resource group. This gives 2G Cloud access to deploy and manage the Microsoft Sentinel resource in this resource group only. A full audit trail of 2G Cloud's actions in your tenant is still provided by the activity log, and 2G Cloud's access can be managed in Azure Lighthouse.",
+                      "text": "This deployment gives 2G Cloud access to the resource group deployed or specified. 2G Cloud will be given the Azure RBAC roles: 'Microsoft Sentinel Contributor', 'Microsoft Sentinel Responder' and 'Logic App Contributor' to the resource group. This gives 2G Cloud access to deploy and manage the Microsoft Sentinel resource in this resource group only. A full audit trail of 2G Cloud's actions in your tenant is still provided by the activity log. To view and manage 2G Cloud's access, go to 'Service providers' in the Azure portal.",
                       "link": {
-                        "label": "Learn more about Azure Lighthouse delegations",
+                        "label": "Learn more about Azure Lighthouse delegations.",
                         "uri": "https://learn.microsoft.com/en-us/azure/lighthouse/overview"
                       }
                     }

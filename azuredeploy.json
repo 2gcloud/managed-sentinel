@@ -223,7 +223,7 @@
                     "principalIdDisplayName": "Managed Sentinel Security Engineer" 
                 }, 
                 { 
-                    "principalId": "fcd96a3b-ffb2-4c6f-9f6e-204eaf6e733e", 
+                    "principalId": "a767fbc1-febe-4884-a588-2f19d986b4ec", 
                     "roleDefinitionId": "3e150937-b8fe-4cfb-8069-0eaf05ecd056",
                     "principalIdDisplayName": "Managed Sentinel Security Responders" 
                 }
