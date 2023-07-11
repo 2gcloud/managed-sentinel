@@ -260,7 +260,7 @@
                           "required": false
                       },
                       "visible": "[if(steps('settings').enableUeba, true, false)]",
-                      "defaultValue": ["AzureActiveDirectory"]
+                      "defaultValue": [{"value": "AzureActiveDirectory"}]
                   },
                   {
                       "name": "enableDiagnostics",
