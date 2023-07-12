@@ -239,6 +239,7 @@
             "type": "Microsoft.ManagedServices/registrationDefinitions",
             "apiVersion": "2019-06-01",
             "name": "[variables('mspRegistrationName')]",
+            "scope": "[concat('Microsoft.Resources/resourceGroups/',parameters('rgName'))]",
             "properties": {
                 "registrationDefinitionName": "[parameters('mspOfferName')]",
                 "description": "[parameters('mspOfferDescription')]",
@@ -269,7 +270,7 @@
                         "value": "[variables('mspAssignmentName')]"
                     },
                     "scope": {
-                        "value": "[concat('Microsoft.Resources/resourceGroups/',parameters('rgName'))]"
+                        "value": "[resourceId('Microsoft.Resources/resourceGroups',parameters('rgName'))]"
                     }
                 }
             }
