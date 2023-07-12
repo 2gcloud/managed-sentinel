@@ -90,7 +90,7 @@
             "metadata": {
                 "description": "Severity levels desired for Analytics Rules"
             },
-            "defaultValue": []
+            "defaultValue": ["None"]
         },
         "dailyQuota": {
             "type": "int",
