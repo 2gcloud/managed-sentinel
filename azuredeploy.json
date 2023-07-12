@@ -251,10 +251,10 @@
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2020-06-01",
             "dependsOn": [
-                "[parameters('rgName')]",
-                "[variables('mspRegistrationName')]"
+                "[resourceId('Microsoft.Resources/resourceGroups',parameters('rgName'))]",
+                "[resourceId('Microsoft.ManagedServices/registrationDefinitions/', variables('mspRegistrationName'))]"
             ],
-            "resourceGroup": "[parameters('rgName')]",
+            "location": "[parameters('location')]",
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
