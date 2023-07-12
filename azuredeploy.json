@@ -267,7 +267,10 @@
                     },
                     "mspAssignmentName": {
                         "value": "[variables('mspAssignmentName')]"
-                    } 
+                    },
+                    "scope": {
+                        "value": "[concat('Microsoft.Resources/resourceGroups',parameters('rgName'))]"
+                    }
                 }
             }
         },
