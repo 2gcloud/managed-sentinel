@@ -16,6 +16,7 @@
             "type": "Microsoft.ManagedServices/registrationAssignments",
             "apiVersion": "2019-06-01",
             "name": "[parameters('mspAssignmentName')]",
+            "scope": "[resourceGroup().id]",
             "properties": {
                 "registrationDefinitionId": "[resourceId('Microsoft.ManagedServices/registrationDefinitions/', parameters('mspRegistrationName'))]"
             }
