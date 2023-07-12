@@ -269,7 +269,7 @@
                         "value": "[variables('mspAssignmentName')]"
                     },
                     "scope": {
-                        "value": "[concat('Microsoft.Resources/resourceGroups',parameters('rgName'))]"
+                        "value": "[concat('Microsoft.Resources/resourceGroups/',parameters('rgName'))]"
                     }
                 }
             }
