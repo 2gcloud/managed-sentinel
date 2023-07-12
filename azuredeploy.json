@@ -255,7 +255,6 @@
                 "[resourceId('Microsoft.ManagedServices/registrationDefinitions/', variables('mspRegistrationName'))]"
             ],
             "location": "[parameters('location')]",
-            "scope": "[resourceId('Microsoft.Resources/resourceGroups',parameters('rgName'))]",
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
