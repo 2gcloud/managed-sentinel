@@ -253,8 +253,8 @@
             "apiVersion": "2020-06-01",
             "location": "[parameters('location')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Resources/resourceGroups',parameters('rgName'))]",
-                "[resourceId('Microsoft.ManagedServices/registrationDefinitions/', variables('mspRegistrationName'))]"
+                "[parameters('rgName')]",
+                "[variables('mspRegistrationName')]"
             ],
             "resourceGroup": "[parameters('rgName')]",
             "properties": {
