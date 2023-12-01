@@ -605,8 +605,6 @@
             "dataRetention": "[basics('dataRetention')]",
             "pricingTier": "[basics('pricingTier')]",
             "capacityReservation": "[basics('capacityReservation')]",
-            "pricingTierSentinel": "[basics('pricingTierSentinel')]",
-            "capacityReservationSentinel": "[basics('capacityReservationSentinel')]",
             "enableUeba": "[steps('settings').enableUeba]",
             "identityProviders": "[steps('settings').identityProviders]",
             "enableDiagnostics": "[steps('settings').enableDiagnostics]",
