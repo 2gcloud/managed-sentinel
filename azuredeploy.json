@@ -16,7 +16,7 @@
             },
             "defaultValue": "rg-managed-sentinel-companyname-law"
         },
-        "pricingTierLA": {
+        "pricingTier": {
             "type": "string",
             "metadata": {
                 "description": "Pricing tier: pergb2018 or legacy tiers (Free, Standalone, PerNode, Standard or Premium) which are not available to all customers."
@@ -33,7 +33,7 @@
             ],
             "defaultValue": "PerGB2018"
         },
-        "capacityReservationLA": {
+        "capacityReservation": {
             "type": "int",
             "metadata": {
                 "description": "Commitment tier"
@@ -289,8 +289,8 @@
                     "workspaceName": {
                         "value": "[parameters('workspaceName')]"
                     },
-                    "pricingTierLA": {
-                        "value": "[parameters('pricingTierLA')]"
+                    "pricingTier": {
+                        "value": "[parameters('pricingTier')]"
                     },
                     "pricingTierSentinel": {
                         "value": "[parameters('pricingTierSentinel')]"
@@ -304,8 +304,8 @@
                     "immediatePurgeDataOn30Days": {
                         "value": "[parameters('immediatePurgeDataOn30Days')]"
                     },
-                    "capacityReservationLA": {
-                        "value": "[parameters('capacityReservationLA')]"
+                    "capacityReservation": {
+                        "value": "[parameters('capacityReservation')]"
                     },
                     "capacityReservationSentinel": {
                         "value": "[parameters('capacityReservationSentinel')]"

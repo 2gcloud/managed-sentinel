@@ -74,7 +74,7 @@
                 "visible": true
             },
             {
-                "name": "pricingTierLA",
+                "name": "pricingTier",
                 "type": "Microsoft.Common.DropDown",
                 "label": "Select pricing tier for Log Analytics",
                 "placeholder": "",
@@ -83,6 +83,10 @@
                 "defaultValue": [{"value": "PerGB2018"}],
                 "constraints": {
                     "allowedValues": [
+                        {
+                            "label": "Standard",
+                            "value": "Standard"
+                        },
                         {
                             "label": "Pay-as-you-go",
                             "value": "PerGB2018"
@@ -97,7 +101,7 @@
                 "visible": true
             },
             {
-                "name": "capacityReservationLA",
+                "name": "capacityReservation",
                 "type": "Microsoft.Common.DropDown",
                 "label": "Select Commitment Tier for Log Analytics",
                 "placeholder": "",
@@ -141,7 +145,7 @@
                     ],
                     "required": true
                 },
-                "visible": "[if(equals(basics('pricingTierLA'),'CapacityReservation'), true, false)]"
+                "visible": "[if(equals(basics('pricingTier'),'CapacityReservation'), true, false)]"
             },
             {
                 "name": "pricingTierSentinel",
@@ -673,8 +677,8 @@
             "workspaceName": "[basics('workspaceName')]",
             "dailyQuota": "[basics('dailyQuota')]",
             "dataRetention": "[basics('dataRetention')]",
-            "pricingTierLA": "[basics('pricingTierLA')]",
-            "capacityReservationLA": "[basics('capacityReservationLA')]",
+            "pricingTier": "[basics('pricingTier')]",
+            "capacityReservation": "[basics('capacityReservation')]",
             "pricingTierSentinel": "[basics('pricingTierSentinel')]",
             "capacityReservationSentinel": "[basics('capacityReservationSentinel')]",
             "enableUeba": "[steps('settings').enableUeba]",
