@@ -50,34 +50,6 @@
             ],
             "defaultValue": 100
         },
-        "pricingTierSentinel": {
-            "type": "string",
-            "metadata": {
-                "description": "Pricing tier: pergb2018 or legacy tiers (Free, Standalone, PerNode, Standard or Premium) which are not available to all customers."
-            },
-            "allowedValues": [
-                "CapacityReservation",
-                "PerGB"
-            ],
-            "defaultValue": "PerGB"
-        },
-        "capacityReservationSentinel": {
-            "type": "int",
-            "metadata": {
-                "description": "Commitment tier"
-            },
-            "allowedValues": [
-                100,
-                200,
-                300,
-                400,
-                500,
-                1000,
-                2000,
-                5000
-            ],
-            "defaultValue": 100
-        },
         "enableDataConnectors": {
             "type": "array",
             "metadata": {
@@ -292,9 +264,6 @@
                     "pricingTier": {
                         "value": "[parameters('pricingTier')]"
                     },
-                    "pricingTierSentinel": {
-                        "value": "[parameters('pricingTierSentinel')]"
-                    },
                     "dailyQuota": {
                         "value": "[parameters('dailyQuota')]"
                     },
@@ -306,9 +275,6 @@
                     },
                     "capacityReservation": {
                         "value": "[parameters('capacityReservation')]"
-                    },
-                    "capacityReservationSentinel": {
-                        "value": "[parameters('capacityReservationSentinel')]"
                     },
                     "location": {
                         "value": "[parameters('location')]"
